@@ -123,14 +123,8 @@ class Sorting:
                 sorted_elements.append(elements2[j])
                 j+=1
             
-        while i<len(elements1):
-            sorted_elements.append(elements1[i])
-            i+=1
-            
-        while j<len(elements2):
-            sorted_elements.append(elements2[j])
-            j+=1
-            
+        sorted_elements.extend(elements1[i:])
+        sorted_elements.extend(elements2[j:])    
         return sorted_elements
     
     # Merge Sort. Some different
